@@ -5,10 +5,17 @@
 | Member | 
 | ----------- | 
 |Berk Baltacı | 
-|	|
+|Azar Hasanaliyev|
+|Cihan Can Kılıç|
+|Emir Yavuz|
 
-### Instructor  
+###  Courses Instructors
 
+Erhan Dolak and Tağmaç Topal
+
+###  Courses Supervisor
+
+###  Innovation Expert
 
 ## Project Description
 
