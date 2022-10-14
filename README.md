@@ -7,14 +7,16 @@
 |Berk Baltacı | 
 |Azar Hasanaliyev|
 |Cihan Can Kılıç|
-|Emir Yavuz|
 |Kerem Tayhan|
+|Emir Yavuz|
 
 ###  Courses Instructors
 
 Erhan Dolak and Tağmaç Topal
 
-###  Courses Supervisor
+###  Project Supervisor
+
+Fazlı Can
 
 ###  Innovation Expert
 
