@@ -1,4 +1,4 @@
-# CS 491 
+# CS 491 Rhythmus  
 
 ## Group Members
 
