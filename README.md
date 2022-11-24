@@ -26,4 +26,5 @@ Our project aims to feed a large quantity of data in MIDI format to our algorith
 ## Reports
 
 - Project Specification Document: [link](Reports/T2314_Project_Specification_Document.pdf)
+- Analysis Requirements Report: [link](Reports/T2314_Analysis_Requirements_Report.pdf)
 
