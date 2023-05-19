@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style/login.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="homeButton">
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('signup')}}">Sign Up</a>
+        <a href="{{url_for('usermanual')}}">User Manual</a>
+    </div>
+    <div class="center">
+        <h1 style="text-align:center">Login</h1>
+        <form method="POST">
+            <div class="form-group">
+                <input 
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                />
+                <span></span>
+                <label for="email">Email Address</label>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input 
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                />
+                <span></span>
+                <label for="password">Password</label>
+            </div>
+            <br/>
+            <button class="submitButton" type="submit">Login</button>
+            <div class="signupLink">
+                Not signed up yet? <a href="{{url_for('signup')}}">Signup</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

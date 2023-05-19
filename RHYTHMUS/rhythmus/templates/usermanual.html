@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style/home.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manual</title>
+</head>
+<body>
+    <div class="topButtons">
+        <a href="{{url_for('userpage')}}">My Songs</a>
+        <a href="{{url_for('listensample')}}">Listen Samples</a>
+        <a href="{{url_for('createsong')}}">Create A New Song</a>
+        <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+    <div class="content">
+        <h1>User Manual</h1>
+        <p>
+            It's easier than ever to create a unique piano piece without any need of a musical knowledge.
+        </p>
+        <p>
+            If you don't have an account you can signup by using the "Signup" button on the top left corner. After you signup you can use the "Login" button on the top left corner to login to your account.
+        </p>
+        <p>
+            With the "Listen Samples" button on the top left corner you can listen to the songs that you will choose to be the foundation of your song.
+        </p>
+        <p>
+            After you choose a song that you like, you can click on the "Create A New Song" button on the top left corner to start the process. In that page you will select a song from the drop-down selection which will be the foundation of your piece. Next you will enter the number of notes you want to generate (500 is ideal). After the length is entered, it's time to name your song. Please choose a name that doesn't contain / or \.
+            Finally you can click on "Done" to start the generation process. This process may take a couple minutes so please don't leave this page. When the generation process is done you will be redirected to "My Songs" page.
+        </p>
+        <p>
+            On "My Songs" page you can listen to or download the pieces you generated. Simply choose one of your songs and click on "Select" then the music player will load your song and press play to listen. For download operations simply choose a song and click "Download". Your browser will automatically start the downlaoding process.
+        </p>
+        <p>
+            You can always access this manual with the "User Manual" button on top left corner of every page.
+        </p>
+        <p>
+            You can logout from your account by clicking on the "Logout" button on the top left corner.
+        </p>
+    </div>
+</body>
+</html>

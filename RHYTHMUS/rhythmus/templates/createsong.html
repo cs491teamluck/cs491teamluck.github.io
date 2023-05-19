@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style/createsong.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Song</title>
+</head>
+<body>
+    <div class="topButtons">
+        <a href="{{url_for('userpage')}}">My Songs</a>
+        <a href="{{url_for('listensample')}}">Listen Samples</a>
+        <a href="{{url_for('usermanual')}}">User Manual</a>
+        <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+    <div class="center">
+        <h2>Let's create a unique song!</h2>
+        <p>Name of your song can't have '/' or '\' in it!</p>
+        <p>This process may take a couple minutes. Please don't leave this page.</p>
+        {% if creationSongs %}
+        <form method="POST">
+            <div class="form-group">
+                <select name="creationsong" id="creationsong">
+                {% for song in creationSongs %}
+                    <option value={{song}}>{{song}}</option>
+                {% endfor %}
+                </select>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input 
+                    type="number" 
+                    name="generateLength" 
+                    id="generateLength" 
+                />
+                <span></span>
+                <label for="generateLength">Number of notes to generate</label>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    name="generateSongName" 
+                    id="generateSongName" 
+                />
+                <span></span>
+                <label for="generateSongName">Name of your song</label>
+                <br/>
+            </div>
+            <div class="form-group2">
+                <input type="submit" value="Done"/>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>

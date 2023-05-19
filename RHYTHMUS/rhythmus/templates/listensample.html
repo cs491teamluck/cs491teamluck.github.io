@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style/userpage.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen Sample Songs</title>
+</head>
+<body>
+    <div class="topButtons">
+        <a href="{{url_for('userpage')}}">My Songs</a>
+        <a href="{{url_for('createsong')}}">Create A New Song</a>
+        <a href="{{url_for('usermanual')}}">User Manual</a>
+        <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+
+    <div class="center">
+        <h2>Listen to the samples and choose the one you like.</h2>
+        {% if sampleSongs %}
+        <form method="POST">
+            <div class="form-group">
+                <select name="samplesong" id="samplesong">
+                {% for song in sampleSongs %}
+                    <option value={{song}}>{{song}}</option>
+                {% endfor %}
+                </select>
+                <input type="submit" name="action" value="Select"/>
+            </div>
+        </form>
+        {% endif %}
+        <h3>{{chosenSong}}</h3>
+        <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+        <div class="midi">
+            <midi-player 
+                src="../static/trainMusics/{{chosenSong}}" sound-font visualizer="#notesVisualizer">
+            </midi-player>
+        </div>
+    </div>
+    
+</body>
+</html>
