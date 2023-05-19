@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg , #2980b9 , #8e44ad);
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Brush Script MT" , "Lucida Handwriting" , cursive;
+}
+
+.topButtons a{
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.content h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: #ffffff;
+}
+
+.content p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
