@@ -6,13 +6,13 @@ app.config['SECRET_KEY'] = 'secretkey'
 
 @app.route('/')
 def home():
-    if controller.getCurrentUserID() == -1:
+    if controller.getCurrentUserID() != -1:
         return redirect(url_for('userpage'))
     return render_template('home.html')
 
 @app.route('/usermanual')
 def usermanual():
-    if controller.getCurrentUserID() != -1:
+    if controller.getCurrentUserID() == -1:
         return render_template('nonusermanual.html')
     else:
         return render_template('usermanual.html')
