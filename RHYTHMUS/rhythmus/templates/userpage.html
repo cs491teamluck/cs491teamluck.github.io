@@ -15,20 +15,22 @@
         <a href="{{url_for('logout')}}">Logout</a>
     </div>
     <div class="center">
-        <h2>Welcome to Rhythmus! Here are your songs.</h2>
         {% if userSongs %}
+        <h2>Welcome to Rhythmus! Here are your songs.</h2>
         <form method="POST">
             <div class="form-group">
                 <select name="usersong" id="usersong">
                     {% for song in userSongs %}
+                        {% if song %}
                         <option value={{song}}>{{song}}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <input type="submit" name="action" value="Select"/>
                 <input type="submit" name="action" value="Download"/>
             </div>
         </form>
-        {% endif %}
+        
         <h3>{{chosenSong}}</h3>
         <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
         <div class="midi">
@@ -36,6 +38,9 @@
                 src="../static/usersongs/{{chosenSong}}" sound-font visualizer="#notesVisualizer">
             </midi-player>
         </div>
+        {% else %}
+        <h2>You haven't created any songs yet!</h2>
+        {% endif %}
     </div>
 </body>
 </html>
